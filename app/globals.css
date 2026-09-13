@@ -473,3 +473,35 @@ button {
 .medex-track span:last-child {
     font-size: 28px;
 }
+
+.pdf-viewer {
+    width: 100%;
+    height: 850px;
+    margin-top: 28px;
+    padding: 8px;
+    border: 1px solid #dedbd3;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #e9e7e1;
+    box-shadow: 0 14px 40px rgba(28, 29, 23, 0.08);
+}
+
+.pdf-viewer iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 15px;
+    background: #fff;
+}
+
+@media (max-width: 800px) {
+    .pdf-viewer {
+        height: 650px;
+        padding: 5px;
+        border-radius: 18px;
+    }
+    .pdf-viewer iframe {
+        border-radius: 13px;
+    }
+}

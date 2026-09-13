@@ -167,6 +167,30 @@ export default async function AssignmentPage({
             </div>
           </section>
         )}
+
+        {slug === "nlp-paper" && (
+          <section className="section">
+            <div className="sectionhead">
+              <div>
+                <div className="eyebrow">Research Paper</div>
+                <h2>Multilingual Constituency Parsing</h2>
+              </div>
+
+              <p>
+                A reproduction study of multilingual constituency parsing using
+                self-attention and pretrained language models, comparing BERT,
+                mBERT, and IndoBERT on English and Indonesian datasets.
+              </p>
+            </div>
+
+            <div className="pdf-viewer">
+              <iframe
+                src="/NLP_PA4_B_YusufFakhriAldrian.pdf"
+                title="Multilingual Constituency Parsing Paper"
+              />
+            </div>
+          </section>
+        )}
       </main>
 
       <footer className="container footer">

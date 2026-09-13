@@ -1,255 +1,248 @@
 {
-  "profile": {
-    "name": "Yusuf Fakhri Aldrian",
-    "class": "B",
-    "npm": "1906351096",
-    "year": 2021
-  },
-  "stats": {
-    "labs": 4,
-    "assignments": 2,
-    "datasets": 9,
-    "files": 36
-  },
-  "labs": [
-    {
-      "slug": "lab-1",
-      "number": "01",
-      "title": "Introduction to Data Science Tools",
-      "date": "11 September 2021",
-      "description": "Python refresher, Jupyter Notebook, Pandas, NumPy, and introductory scikit-learn.",
-      "datasets": [
-        {
-          "name": "Melbourne House Prices Lite",
-          "file": "lab1-introtodatasciencetools/MELBOURNE_HOUSE_PRICES_LITE.csv",
-          "rows": 335,
-          "columns": 13
-        }
-      ],
-      "topics": [
-        "Jupyter Notebook",
-        "Pandas",
-        "Missing Values",
-        "NumPy",
-        "Cosine Similarity"
-      ]
+    "profile": {
+        "name": "Yusuf Fakhri Aldrian",
+        "class": "B",
+        "npm": "1906351096",
+        "year": 2021
     },
-    {
-      "slug": "lab-2",
-      "number": "02",
-      "title": "Statistics & Data Visualization",
-      "date": "18 September 2021",
-      "description": "Exploratory data analysis of avocado prices using descriptive statistics, correlation, distributions, and visualization.",
-      "datasets": [
-        {
-          "name": "Avocado",
-          "file": "lab2-statisticsanddataviz/avocado.csv",
-          "rows": 18249,
-          "columns": 14
-        }
-      ],
-      "topics": [
-        "EDA",
-        "Descriptive Statistics",
-        "Correlation",
-        "KDE",
-        "Box Plot",
-        "Scatter Plot"
-      ]
+    "stats": {
+        "labs": 4,
+        "assignments": 2,
+        "datasets": 9,
+        "files": 36
     },
-    {
-      "slug": "lab-3",
-      "number": "03",
-      "title": "Data Preparation",
-      "date": "25 September 2021",
-      "description": "Preprocessing the Titanic dataset: summary statistics, outliers, missing values, cleaning, and preparation for machine learning.",
-      "datasets": [
-        {
-          "name": "Titanic Part 1",
-          "file": "lab3-datapreparation/data_titanic1.csv",
-          "rows": 900,
-          "columns": 14
+    "labs": [{
+            "slug": "lab-1",
+            "number": "01",
+            "title": "Introduction to Data Science Tools",
+            "date": "11 September 2021",
+            "description": "Python refresher, Jupyter Notebook, Pandas, NumPy, and introductory scikit-learn.",
+            "datasets": [{
+                "name": "Melbourne House Prices Lite",
+                "file": "lab1-introtodatasciencetools/MELBOURNE_HOUSE_PRICES_LITE.csv",
+                "rows": 335,
+                "columns": 13
+            }],
+            "topics": [
+                "Jupyter Notebook",
+                "Pandas",
+                "Missing Values",
+                "NumPy",
+                "Cosine Similarity"
+            ]
         },
         {
-          "name": "Titanic Part 2",
-          "file": "lab3-datapreparation/data_titanic2.csv",
-          "rows": 459,
-          "columns": 14
-        }
-      ],
-      "topics": [
-        "Preprocessing",
-        "Missing Values",
-        "Outliers",
-        "Feature Preparation"
-      ]
-    },
-    {
-      "slug": "lab-4",
-      "number": "04",
-      "title": "Decision Tree & Random Forest",
-      "date": "16 October 2021",
-      "description": "Classification of abalone classes with Decision Trees and Random Forests, including hyperparameter experiments.",
-      "datasets": [
+            "slug": "lab-2",
+            "number": "02",
+            "title": "Statistics & Data Visualization",
+            "date": "18 September 2021",
+            "description": "Exploratory data analysis of avocado prices using descriptive statistics, correlation, distributions, and visualization.",
+            "datasets": [{
+                "name": "Avocado",
+                "file": "lab2-statisticsanddataviz/avocado.csv",
+                "rows": 18249,
+                "columns": 14
+            }],
+            "topics": [
+                "EDA",
+                "Descriptive Statistics",
+                "Correlation",
+                "KDE",
+                "Box Plot",
+                "Scatter Plot"
+            ]
+        },
         {
-          "name": "Abalone",
-          "file": "lab4-decisiontree/dataset.csv",
-          "rows": 4177,
-          "columns": 8
+            "slug": "lab-3",
+            "number": "03",
+            "title": "Data Preparation",
+            "date": "25 September 2021",
+            "description": "Preprocessing the Titanic dataset: summary statistics, outliers, missing values, cleaning, and preparation for machine learning.",
+            "datasets": [{
+                    "name": "Titanic Part 1",
+                    "file": "lab3-datapreparation/data_titanic1.csv",
+                    "rows": 900,
+                    "columns": 14
+                },
+                {
+                    "name": "Titanic Part 2",
+                    "file": "lab3-datapreparation/data_titanic2.csv",
+                    "rows": 459,
+                    "columns": 14
+                }
+            ],
+            "topics": [
+                "Preprocessing",
+                "Missing Values",
+                "Outliers",
+                "Feature Preparation"
+            ]
+        },
+        {
+            "slug": "lab-4",
+            "number": "04",
+            "title": "Decision Tree & Random Forest",
+            "date": "16 October 2021",
+            "description": "Classification of abalone classes with Decision Trees and Random Forests, including hyperparameter experiments.",
+            "datasets": [{
+                "name": "Abalone",
+                "file": "lab4-decisiontree/dataset.csv",
+                "rows": 4177,
+                "columns": 8
+            }],
+            "topics": [
+                "CART",
+                "Decision Tree",
+                "Hyperparameters",
+                "Random Forest",
+                "Model Evaluation"
+            ]
         }
-      ],
-      "topics": [
-        "CART",
-        "Decision Tree",
-        "Hyperparameters",
-        "Random Forest",
-        "Model Evaluation"
-      ]
+    ],
+    "assignments": [{
+            "slug": "assignment-1",
+            "number": "01",
+            "title": "Preprocessing & Dimensionality Reduction",
+            "description": "Startup and cancer datasets: data quality, exploration, preprocessing, t-SNE, manual PCA, and scikit-learn PCA.",
+            "datasets": [{
+                    "name": "Startup Data",
+                    "file": "assignment1/startup_data.csv",
+                    "rows": 949,
+                    "columns": 18
+                },
+                {
+                    "name": "Cancer Registry",
+                    "file": "assignment1/cancer_reg.csv",
+                    "rows": 3047,
+                    "columns": 14
+                }
+            ]
+        },
+        {
+            "slug": "assignment-2",
+            "number": "02",
+            "title": "Clustering",
+            "description": "K-means, Agglomerative Clustering, similarity metrics, silhouette coefficient, and the relationship between PCA and clustering.",
+            "datasets": [{
+                    "name": "Soal 2",
+                    "file": "assignment2/soal2.csv",
+                    "rows": 5250,
+                    "columns": 2
+                },
+                {
+                    "name": "Soal 3",
+                    "file": "assignment2/soal3.csv",
+                    "rows": 800,
+                    "columns": 2
+                },
+                {
+                    "name": "Soal 4",
+                    "file": "assignment2/soal4.csv",
+                    "rows": 1000,
+                    "columns": 3
+                }
+            ]
+        },
+        {
+            "slug": "nlp-paper",
+            "number": " - NLP PAPER",
+            "title": "Multilingual Constituency Parsing with Self-Attention and Pre-Training",
+            "description": "A reproduction study of Kitaev et al.’s multilingual constituency parsing approach using self-attention and pre-trained language models. The project evaluated English and Indonesian constituency parsing using English BERT, multilingual BERT (mBERT), and IndoBERT. \nThe study implemented and trained a neural chart parser, constructed POS/tag vocabularies, evaluated parsing performance using Precision, Recall, and F1 score, and compared multilingual and language-specific pre-trained models. \nResults showed that English BERT achieved an F1 score of 88.08% on PTB, while mBERT achieved 80.18%. On the Indonesian ICON dataset, IndoBERT achieved 83.40%, outperforming mBERT at 83.13%.",
+            "datasets": []
+        }
+    ],
+    "findings": {
+        "startup": {
+            "rows": 949,
+            "missing": 222,
+            "duplicates": 26,
+            "status": [{
+                    "name": "Acquired",
+                    "value": 610
+                },
+                {
+                    "name": "Closed",
+                    "value": 339
+                }
+            ],
+            "correlations": [{
+                    "name": "Funding rounds",
+                    "value": 0.2585
+                },
+                {
+                    "name": "Age at last funding",
+                    "value": 0.202125
+                },
+                {
+                    "name": "Avg participants",
+                    "value": 0.321973
+                },
+                {
+                    "name": "Longitude",
+                    "value": -0.092469
+                }
+            ],
+            "note": "The notebook explored how funding history, location and participation relate to Top 500 status."
+        },
+        "pca": {
+            "explained": [
+                0.99873459,
+                0.00126277
+            ],
+            "note": "The scikit-learn PCA experiment found that the first two principal components explain approximately 99.9997% of the variance in the cancer dataset."
+        },
+        "avocado": {
+            "averagePrice": 1.4059784098,
+            "years": [
+                2015,
+                2016,
+                2017
+            ],
+            "note": "The lab compares conventional and organic avocado prices, distributions, correlations, and regional/year patterns."
+        },
+        "titanic": {
+            "rows": 900,
+            "survivalRate": 0.4411111111,
+            "missingAge": 177,
+            "missingCabin": 688,
+            "missingBoat": 603,
+            "note": "The preparation exercise investigates missing values, outliers and relationships with survival before machine-learning preparation."
+        },
+        "clustering": {
+            "soal2ClustersObserved": 10,
+            "silhouette": 0.692915153,
+            "soal4Rows": 1000,
+            "soal4Features": 3,
+            "note": "The clustering assignment explored K-means, Agglomerative clustering, and PCA-before/after-clustering."
+        },
+        "models": [{
+                "model": "Decision Tree \u00b7 max_depth 4",
+                "accuracy": 0.8038277512,
+                "precision": 0.5655172414,
+                "recall": 0.4480874317,
+                "f1": 0.5
+            },
+            {
+                "model": "Decision Tree \u00b7 max_depth 7",
+                "accuracy": 0.8313397129,
+                "precision": 0.6438356164,
+                "recall": 0.5136612022,
+                "f1": 0.5714285714
+            },
+            {
+                "model": "Random Forest \u00b7 depth 7 \u00b7 100 trees",
+                "accuracy": 0.8301435407,
+                "precision": 0.702970297,
+                "recall": 0.3879781421,
+                "f1": 0.5
+            },
+            {
+                "model": "Random Forest \u00b7 depth 7 \u00b7 50 trees",
+                "accuracy": 0.8313397129,
+                "precision": 0.6909090909,
+                "recall": 0.4153005464,
+                "f1": 0.5187713311
+            }
+        ]
     }
-  ],
-  "assignments": [
-    {
-      "slug": "assignment-1",
-      "number": "01",
-      "title": "Preprocessing & Dimensionality Reduction",
-      "description": "Startup and cancer datasets: data quality, exploration, preprocessing, t-SNE, manual PCA, and scikit-learn PCA.",
-      "datasets": [
-        {
-          "name": "Startup Data",
-          "file": "assignment1/startup_data.csv",
-          "rows": 949,
-          "columns": 18
-        },
-        {
-          "name": "Cancer Registry",
-          "file": "assignment1/cancer_reg.csv",
-          "rows": 3047,
-          "columns": 14
-        }
-      ]
-    },
-    {
-      "slug": "assignment-2",
-      "number": "02",
-      "title": "Clustering",
-      "description": "K-means, Agglomerative Clustering, similarity metrics, silhouette coefficient, and the relationship between PCA and clustering.",
-      "datasets": [
-        {
-          "name": "Soal 2",
-          "file": "assignment2/soal2.csv",
-          "rows": 5250,
-          "columns": 2
-        },
-        {
-          "name": "Soal 3",
-          "file": "assignment2/soal3.csv",
-          "rows": 800,
-          "columns": 2
-        },
-        {
-          "name": "Soal 4",
-          "file": "assignment2/soal4.csv",
-          "rows": 1000,
-          "columns": 3
-        }
-      ]
-    }
-  ],
-  "findings": {
-    "startup": {
-      "rows": 949,
-      "missing": 222,
-      "duplicates": 26,
-      "status": [
-        {
-          "name": "Acquired",
-          "value": 610
-        },
-        {
-          "name": "Closed",
-          "value": 339
-        }
-      ],
-      "correlations": [
-        {
-          "name": "Funding rounds",
-          "value": 0.2585
-        },
-        {
-          "name": "Age at last funding",
-          "value": 0.202125
-        },
-        {
-          "name": "Avg participants",
-          "value": 0.321973
-        },
-        {
-          "name": "Longitude",
-          "value": -0.092469
-        }
-      ],
-      "note": "The notebook explored how funding history, location and participation relate to Top 500 status."
-    },
-    "pca": {
-      "explained": [
-        0.99873459,
-        0.00126277
-      ],
-      "note": "The scikit-learn PCA experiment found that the first two principal components explain approximately 99.9997% of the variance in the cancer dataset."
-    },
-    "avocado": {
-      "averagePrice": 1.4059784098,
-      "years": [
-        2015,
-        2016,
-        2017
-      ],
-      "note": "The lab compares conventional and organic avocado prices, distributions, correlations, and regional/year patterns."
-    },
-    "titanic": {
-      "rows": 900,
-      "survivalRate": 0.4411111111,
-      "missingAge": 177,
-      "missingCabin": 688,
-      "missingBoat": 603,
-      "note": "The preparation exercise investigates missing values, outliers and relationships with survival before machine-learning preparation."
-    },
-    "clustering": {
-      "soal2ClustersObserved": 10,
-      "silhouette": 0.692915153,
-      "soal4Rows": 1000,
-      "soal4Features": 3,
-      "note": "The clustering assignment explored K-means, Agglomerative clustering, and PCA-before/after-clustering."
-    },
-    "models": [
-      {
-        "model": "Decision Tree \u00b7 max_depth 4",
-        "accuracy": 0.8038277512,
-        "precision": 0.5655172414,
-        "recall": 0.4480874317,
-        "f1": 0.5
-      },
-      {
-        "model": "Decision Tree \u00b7 max_depth 7",
-        "accuracy": 0.8313397129,
-        "precision": 0.6438356164,
-        "recall": 0.5136612022,
-        "f1": 0.5714285714
-      },
-      {
-        "model": "Random Forest \u00b7 depth 7 \u00b7 100 trees",
-        "accuracy": 0.8301435407,
-        "precision": 0.702970297,
-        "recall": 0.3879781421,
-        "f1": 0.5
-      },
-      {
-        "model": "Random Forest \u00b7 depth 7 \u00b7 50 trees",
-        "accuracy": 0.8313397129,
-        "precision": 0.6909090909,
-        "recall": 0.4153005464,
-        "f1": 0.5187713311
-      }
-    ]
-  }
 }
