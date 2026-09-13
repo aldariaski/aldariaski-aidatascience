@@ -270,6 +270,17 @@ export default function Home() {
 
           <DatasetLinks />
         </section>
+
+        <div className="container">
+          <Link
+              href="https://django-server-production-a05b.up.railway.app/medex/"
+              className="medex-banner">
+              <div className="medex-track">
+                  <span>ALSO LOOK AT MEDEX</span>
+                  <span>↗</span>
+              </div>
+          </Link>
+      </div>
       </main>
 
       {/* FOOTER */}
