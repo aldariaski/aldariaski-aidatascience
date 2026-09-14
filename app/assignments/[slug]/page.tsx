@@ -2,6 +2,12 @@ import Link from "next/link";
 import data from "../../../public/site-data.json";
 import charts from "../../../public/chart-data.json";
 import { BarChart, Scatter } from "../../../components/Charts";
+import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import { IpynbRenderer } from 'react-ipynb-renderer';
+import 'react-ipynb-renderer/dist/styles/monokai.css';
+import 'katex/dist/katex.min.css';
 
 export default async function AssignmentPage({
   params,
@@ -31,9 +37,16 @@ export default async function AssignmentPage({
 
       <main className="container">
         <section className="detailhero">
-          <div className="eyebrow">ASSIGNMENT {a.number} · 2021</div>
+          <div className="eyebrow">ASSIGNMENT {a.number} · {a.year}</div>
           <h1>{a.title}</h1>
-          <p className="prose">{a.description}</p>
+          <div className="prose">
+            <ReactMarkdown
+              remarkPlugins={[remarkMath]}
+              rehypePlugins={[rehypeKatex]}
+            >
+              {a.description}
+            </ReactMarkdown>
+          </div>
           <div className="pillnav">
             {a.datasets.map((d) => (
               <Link
@@ -164,6 +177,77 @@ export default async function AssignmentPage({
               Soal 4 contains 1,000 rows and 3 features. The notebook compares
               clustering after PCA with clustering before PCA, then reduces the
               results to two dimensions for visualization.
+            </div>
+          </section>
+        )}
+
+        {slug === "datmin-1" && (
+          <section className="section">
+            <div className="sectionhead">
+              <div>
+                <div className="eyebrow">Data exploration</div>
+                <h2>Analyzing 52,466 books.</h2>
+              </div>
+              <p>
+                The dataset covers key attributes including price, rating, votes, score, 
+                page count, and format to evaluate pricing drivers and reader behavior.
+              </p>
+            </div>
+
+            <div className="split">
+              <div className="panel">
+                <div className="eyebrow">Book dataset</div>
+                <h3>52,466 records</h3>
+                <p>
+                  Explored price distributions, central tendencies, and key correlations across formats. 
+                  While format significantly affects price (ANOVA F ≈ 7.65, p ≈ 1.8 × 10⁻³⁰), 
+                  practical effect sizes vary widely across variables.
+                </p>
+              </div>
+              <div className="chartbox">
+                <h3 className="charttitle">Price by format</h3>
+                <BarChart
+                  items={Object.entries(charts.bookFormatPrice || {}).map(
+                    ([name, value]) => ({
+                      name,
+                      value: Number(value),
+                    })
+                  )}
+                />
+              </div>
+            </div>
+
+            <div className="sectionhead" style={{ marginTop: 70 }}>
+              <div>
+                <div className="eyebrow">Correlation analysis</div>
+                <h2>Rating vs. vote counts.</h2>
+              </div>
+              <p>
+                A strong positive relationship exists between a book's rating and its total 
+                number of votes (Pearson r ≈ 0.709), indicating popular books consistently maintain 
+                higher average ratings.
+              </p>
+            </div>
+            <div className="chartbox">
+              <BarChart items={charts.bookRatingCorr || []} />
+            </div>
+
+            <div className="sectionhead" style={{ marginTop: 70 }}>
+              <div>
+                <div className="eyebrow">Statistical insight</div>
+                <h2>Significance vs. effect size.</h2>
+              </div>
+              <p>
+                With a sample size of 52,466, minor correlations (such as r ≈ 0.026) produce 
+                statistically significant p-values despite having minimal practical predictive power.
+              </p>
+            </div>
+            <div className="panel light">
+              <h3>r ≈ 0.709 vs. r ≈ 0.026</h3>
+              <p>
+                Demonstrates the critical statistical distinction between p-value significance 
+                driven by large N and actual practical effect size in portfolio-level data analysis.
+              </p>
             </div>
           </section>
         )}

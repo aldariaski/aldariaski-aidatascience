@@ -1,5 +1,10 @@
 import Link from "next/link";
 import data from "../public/site-data.json";
+import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
+
 
 const fmt = (n: number) =>
   new Intl.NumberFormat("en-US").format(n);
@@ -141,12 +146,23 @@ export default function Home() {
                     ASSIGNMENT {assignment.number}
                   </span>
 
-                  <span>2021</span>
+                  <span>{assignment.year}</span>
                 </div>
 
                 <h3>{assignment.title}</h3>
 
-                <p>{assignment.description}</p>
+                <ReactMarkdown
+                    remarkPlugins={[remarkMath]}
+                    rehypePlugins={[rehypeKatex]} 
+                    components={{
+                      p: ({ children }) => (
+                        <p className="text-sm leading-relaxed text-neutral-300">
+                          {children}
+                        </p>
+                    ),
+                  }}>
+                      {assignment.description}
+                </ReactMarkdown>
 
                 <div className="tags">
                   {assignment.datasets.map((dataset) => (

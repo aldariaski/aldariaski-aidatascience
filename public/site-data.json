@@ -103,6 +103,7 @@
             "slug": "assignment-1",
             "number": "01",
             "title": "Preprocessing & Dimensionality Reduction",
+            "year": 2021,
             "description": "Startup and cancer datasets: data quality, exploration, preprocessing, t-SNE, manual PCA, and scikit-learn PCA.",
             "datasets": [{
                     "name": "Startup Data",
@@ -122,6 +123,7 @@
             "slug": "assignment-2",
             "number": "02",
             "title": "Clustering",
+            "year": 2021,
             "description": "K-means, Agglomerative Clustering, similarity metrics, silhouette coefficient, and the relationship between PCA and clustering.",
             "datasets": [{
                     "name": "Soal 2",
@@ -144,8 +146,17 @@
             ]
         },
         {
+            "slug": "datmin-1",
+            "number": " - DATA MINING 1",
+            "year": 2023,
+            "title": "Book Data Analysis - Statistical Inference",
+            "description": "Analyzed a 52,466-book dataset to identify drivers of pricing and popular demand. Discovered a strong positive correlation ($r \\approx 0.709$) between rating count and overall score. ANOVA testing confirmed significant price variance across formats ($F \\approx 7.65, p < 10^{-29}$). Highlighted the distinction between $p$-value statistical significance and practical effect size on large-sample correlations ($r \\approx 0.026$).",
+            "datasets": []
+        },
+        {
             "slug": "nlp-paper",
             "number": " - NLP PAPER",
+            "year": 2023,
             "title": "Multilingual Constituency Parsing with Self-Attention and Pre-Training",
             "description": "A reproduction study of Kitaev et al.’s multilingual constituency parsing approach using self-attention and pre-trained language models. The project evaluated English and Indonesian constituency parsing using English BERT, multilingual BERT (mBERT), and IndoBERT. \nThe study implemented and trained a neural chart parser, constructed POS/tag vocabularies, evaluated parsing performance using Precision, Recall, and F1 score, and compared multilingual and language-specific pre-trained models. \nResults showed that English BERT achieved an F1 score of 88.08% on PTB, while mBERT achieved 80.18%. On the Indonesian ICON dataset, IndoBERT achieved 83.40%, outperforming mBERT at 83.13%.",
             "datasets": []
