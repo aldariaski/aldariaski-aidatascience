@@ -7,9 +7,10 @@
     },
     "stats": {
         "labs": 4,
-        "assignments": 2,
+        "assignments": 4,
         "datasets": 9,
-        "files": 36
+        "files": 36,
+        "totalNotebooks": 2
     },
     "labs": [{
             "slug": "lab-1",
@@ -29,7 +30,8 @@
                 "Missing Values",
                 "NumPy",
                 "Cosine Similarity"
-            ]
+            ],
+            "notebook": "lab1-introtodatasciencetools/B_Lab1_1906351096_Yusuf_Fakhri_Aldrian.ipynb"
         },
         {
             "slug": "lab-2",
@@ -50,7 +52,8 @@
                 "KDE",
                 "Box Plot",
                 "Scatter Plot"
-            ]
+            ],
+            "notebook": "lab2-statisticsanddataviz/B_Lab2_1906351096_YusufFakhriAldrian.ipynb"
         },
         {
             "slug": "lab-3",
@@ -76,7 +79,8 @@
                 "Missing Values",
                 "Outliers",
                 "Feature Preparation"
-            ]
+            ],
+            "notebook": "lab3-datapreparation/B_Lab3_1906351096_YusufFakhriAldrian.ipynb"
         },
         {
             "slug": "lab-4",
@@ -96,7 +100,8 @@
                 "Hyperparameters",
                 "Random Forest",
                 "Model Evaluation"
-            ]
+            ],
+            "notebook": "lab4-decisiontree/B_Lab4_1906351096_Yusuf_Fakhri_Aldrian.ipynb"
         }
     ],
     "assignments": [{
@@ -117,7 +122,8 @@
                     "rows": 3047,
                     "columns": 14
                 }
-            ]
+            ],
+            "notebook": "assignment1/B_Tugas1_1906351096_YusufFakhriAldrian.ipynb"
         },
         {
             "slug": "assignment-2",
@@ -143,7 +149,8 @@
                     "rows": 1000,
                     "columns": 3
                 }
-            ]
+            ],
+            "notebook": "assignment2/B_Tugas2_1906351096_YusufFakhriAldrian.ipynb"
         },
         {
             "slug": "datmin-1",
@@ -151,7 +158,82 @@
             "year": 2023,
             "title": "Book Data Analysis - Statistical Inference",
             "description": "Analyzed a 52,466-book dataset to identify drivers of pricing and popular demand. Discovered a strong positive correlation ($r \\approx 0.709$) between rating count and overall score. ANOVA testing confirmed significant price variance across formats ($F \\approx 7.65, p < 10^{-29}$). Highlighted the distinction between $p$-value statistical significance and practical effect size on large-sample correlations ($r \\approx 0.026$).",
-            "datasets": []
+            "datasets": [{
+                "name": "Books",
+                "file": "datmin1/books.csv",
+                "rows": 52477,
+                "columns": 25
+            }],
+            "notebook": "datmin1/TP1_1906351096_YusufFakhriAldrian.ipynb"
+        },
+        {
+            "slug": "datmin-2",
+            "number": " - DATA MINING 2",
+            "year": 2023,
+            "title": "Online News Popularity - Regression & Classification Protocols",
+            "description": "Evaluated linear models, Random Forests, AdaBoost, and Gradient Boosting across 50 engineered features. Identified data quality edge cases, including 862 zero-content token articles requiring dedicated pipeline isolation. Evaluated trade-offs across classification (ROC/AUC) and regression metrics ($MAE$, $MSE$), highlighting evaluation metric selection for sparse distributions.",
+            "datasets": [{
+                "name": "Shares",
+                "file": "datmin2/1906351096_Yusuf Fakhri Aldrian.csv",
+                "rows": 10000,
+                "columns": 2
+            }],
+            "notebook": "datmin2/1906351096_Yusuf Fakhri Aldrian.ipynb"
+        },
+        {
+            "slug": "datmin-3",
+            "number": " - DATA MINING 3",
+            "title": "Sentiment Analysis",
+            "year": 2023,
+            "description": "This experiment compares classical text classification based on TF-IDF features with contextual language representations from fine-tuned BERT embeddings.",
+            "datasets": [{
+                    "name": "Test",
+                    "file": "assignment3/test.csv",
+                    "rows": 25000,
+                    "columns": 2
+                },
+                {
+                    "name": "Train",
+                    "file": "assignment3/train.csv",
+                    "rows": 25000,
+                    "columns": 3
+                },
+                {
+                    "name": "Unsupervised",
+                    "file": "assignment3/unsupervised.csv",
+                    "rows": 50000,
+                    "columns": 3
+                }
+            ],
+            "notebook": "assignment3/TP3_1906351096_YusufFakhriAldrian.ipynb"
+        },
+        {
+            "slug": "datmin-4",
+            "number": " - DATA MINING 4",
+            "title": "Social Network Analysis",
+            "year": 2023,
+            "description": "Directed graph construction and community detection across Twitter/X interaction topologies.",
+            "datasets": [{
+                "name": "Taman Safari",
+                "file": "datmin4/taman_safari_recency_tweets.jsonl",
+                "rows": 5250,
+                "columns": 3
+            }],
+            "notebook": "datmin4/TP4_1906351096__YusufFakhriAldrianipynb.ipynb"
+        },
+        {
+            "slug": "tk9",
+            "number": " - DATA MINING GROUP TASK",
+            "year": 2023,
+            "title": "Traffic Accident Analysis",
+            "description": "An investigation of Puerto Rico traffic accidents from 2017 to 2020 examining timing, alcohol involvement, road types, urban vs. rural locations, pedestrian accidents, and fatality predictors.",
+            "datasets": [{
+                "name": "Traffic Accident in Puerto Rico",
+                "file": "tk9/accident2018_separatedcolumn.csv",
+                "rows": 295,
+                "columns": 91
+            }],
+            "notebook": "tk9/TK_9.ipynb"
         },
         {
             "slug": "nlp-paper",
@@ -159,7 +241,8 @@
             "year": 2023,
             "title": "Multilingual Constituency Parsing with Self-Attention and Pre-Training",
             "description": "A reproduction study of Kitaev et al.’s multilingual constituency parsing approach using self-attention and pre-trained language models. The project evaluated English and Indonesian constituency parsing using English BERT, multilingual BERT (mBERT), and IndoBERT. \nThe study implemented and trained a neural chart parser, constructed POS/tag vocabularies, evaluated parsing performance using Precision, Recall, and F1 score, and compared multilingual and language-specific pre-trained models. \nResults showed that English BERT achieved an F1 score of 88.08% on PTB, while mBERT achieved 80.18%. On the Indonesian ICON dataset, IndoBERT achieved 83.40%, outperforming mBERT at 83.13%.",
-            "datasets": []
+            "datasets": [],
+            "notebook": "nlp-paper/NLP_Proyek_Akhir_Constituency_Parsing.ipynb"
         }
     ],
     "findings": {

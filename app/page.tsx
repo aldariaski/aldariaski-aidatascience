@@ -5,11 +5,11 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 
-
 const fmt = (n: number) =>
   new Intl.NumberFormat("en-US").format(n);
 
 export default function Home() {
+  
   return (
     <>
       <header className="container nav">
@@ -20,6 +20,7 @@ export default function Home() {
         <nav className="navlinks">
           <a href="#labs">Labs</a>
           <a href="#assignments">Assignments</a>
+          <a href="#notebooks">Notebooks</a>
           <a href="#results">Results</a>
           <a href="#datasets">Datasets</a>
         </nav>
@@ -58,12 +59,17 @@ export default function Home() {
           </div>
 
           <div className="stat">
-            <strong>02</strong>
+            <strong>08</strong>
             <span>Assignments</span>
           </div>
 
           <div className="stat">
-            <strong>09</strong>
+            <strong>12</strong>
+            <span>Notebooks</span>
+          </div>
+
+          <div className="stat">
+            <strong>17</strong>
             <span>Datasets</span>
           </div>
 
@@ -152,16 +158,17 @@ export default function Home() {
                 <h3>{assignment.title}</h3>
 
                 <ReactMarkdown
-                    remarkPlugins={[remarkMath]}
-                    rehypePlugins={[rehypeKatex]} 
-                    components={{
-                      p: ({ children }) => (
-                        <p className="text-sm leading-relaxed text-neutral-300">
-                          {children}
-                        </p>
+                  remarkPlugins={[remarkMath]}
+                  rehypePlugins={[rehypeKatex]} 
+                  components={{
+                    p: ({ children }) => (
+                      <p className="text-sm leading-relaxed text-neutral-300">
+                        {children}
+                      </p>
                     ),
-                  }}>
-                      {assignment.description}
+                  }}
+                >
+                  {assignment.description}
                 </ReactMarkdown>
 
                 <div className="tags">
@@ -181,6 +188,23 @@ export default function Home() {
               </Link>
             ))}
           </div>
+        </section>
+
+        {/* NOTEBOOKS */}
+        <section id="notebooks" className="container section">
+          <div className="sectionhead">
+            <div>
+              <div className="eyebrow">Interactive Code</div>
+              <h2>Rendered Jupyter Notebooks.</h2>
+            </div>
+
+            <p>
+              View executed Python code, Markdown documentation cells, and 
+              inline data outputs directly in the browser environment.
+            </p>
+          </div>
+
+          <NotebookLinks />
         </section>
 
         {/* RESULTS */}
@@ -289,14 +313,15 @@ export default function Home() {
 
         <div className="container">
           <Link
-              href="https://django-server-production-a05b.up.railway.app/medex/"
-              className="medex-banner">
-              <div className="medex-track">
-                  <span>ALSO LOOK AT MEDEX</span>
-                  <span>↗</span>
-              </div>
+            href="https://django-server-production-a05b.up.railway.app/medex/"
+            className="medex-banner"
+          >
+            <div className="medex-track">
+              <span>ALSO LOOK AT MEDEX</span>
+              <span>↗</span>
+            </div>
           </Link>
-      </div>
+        </div>
       </main>
 
       {/* FOOTER */}
@@ -305,6 +330,51 @@ export default function Home() {
         <span>Yusuf Fakhri Aldrian · Class B</span>
       </footer>
     </>
+  );
+}
+
+function NotebookLinks() {
+  const notebooks = [
+    ...data.labs.map((lab) => ({
+      name: lab.title,
+      file: lab.notebook || `${lab.slug}.ipynb`,
+      category: `LAB ${lab.number}`,
+    })),
+    ...data.assignments.map((assignment) => ({
+      name: assignment.title,
+      file: assignment.notebook || `${assignment.slug}.ipynb`,
+      category: `ASSIGNMENT ${assignment.number}`,
+    })),
+  ];
+
+  // Prevent duplicate notebooks from rendering multiple times.
+  const uniqueNotebooks = Array.from(
+    new Map(notebooks.map((nb) => [nb.file, nb])).values()
+  );
+
+  return (
+    <div className="cards">
+      {uniqueNotebooks.map((nb) => (
+        <Link
+          className="card"
+          href={`/notebook?file=${encodeURIComponent(nb.file)}`}
+          key={nb.file}
+        >
+          <div className="cardtop">
+            <span>IPYNB</span>
+            <span>{nb.category}</span>
+          </div>
+
+          <h3>{nb.name}</h3>
+
+          <p>{nb.file.split("/").pop()}</p>
+
+          <span className="arrow">
+            Open notebook →
+          </span>
+        </Link>
+      ))}
+    </div>
   );
 }
 
@@ -356,4 +426,3 @@ function DatasetLinks() {
     </div>
   );
 }
-

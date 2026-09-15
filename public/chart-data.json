@@ -12467,35 +12467,341 @@
             "E": 8.115496541703548
         }
     ],
-
     "bookFormatPrice": {
-        "Hardcover": 1,
-        "Paperback": 1,
-        "Mass Market Paperback": 1,
-        "Kindle Edition": 1,
-        "Audiobook": 1,
-        "ebook": 1
+        "Hardcover": 10.302858,
+        "Paperback": 9.358402,
+        "Mass Market Paperback": 5.569576,
+        "Kindle Edition": 11.604628,
+        "Audiobook": 15.089667,
+        "ebook": 24.601262
     },
     "bookRatingCorr": [{
-            "name": "4.5 - 5.0 Stars",
-            "value": 1420
+            "name": "Number of ratings vs book score",
+            "value": 0.7092247703816008
         },
         {
-            "name": "4.0 - 4.4 Stars",
-            "value": 2850
-        },
-        {
-            "name": "3.5 - 3.9 Stars",
-            "value": 1980
-        },
-        {
-            "name": "3.0 - 3.4 Stars",
-            "value": 650
-        },
-        {
-            "name": "< 3.0 Stars",
-            "value": 210
+            "name": "1-star ratings vs pages",
+            "value": 0.026108113721744083
         }
-    ]
-
+    ],
+    "onlineNews": {
+        "dataset": {
+            "rows": 29643,
+            "features": 50,
+            "zeroTokenArticles": 862
+        },
+        "modelComparison": [{
+                "name": "Linear Regression",
+                "mse": 0.24900875085967575
+            },
+            {
+                "name": "Gradient Boosting Regression",
+                "mse": 0.24958172288580027
+            }
+        ],
+        "testRegression": [{
+                "metric": "MAE",
+                "value": 3343.76
+            },
+            {
+                "metric": "MSE",
+                "value": 104449189.82
+            }
+        ]
+    },
+    "trafficAccidents": {
+        "drunkByDay": [{
+                "day": "Monday",
+                "count": 33
+            },
+            {
+                "day": "Tuesday",
+                "count": 12
+            },
+            {
+                "day": "Wednesday",
+                "count": 40
+            },
+            {
+                "day": "Thursday",
+                "count": 31
+            },
+            {
+                "day": "Friday",
+                "count": 50
+            },
+            {
+                "day": "Saturday",
+                "count": 77
+            },
+            {
+                "day": "Sunday",
+                "count": 93
+            }
+        ],
+        "fatalitiesByArea": [{
+                "area": "Rural",
+                "count": 643
+            },
+            {
+                "area": "Urban",
+                "count": 486
+            }
+        ],
+        "fatalitiesByRoadType": [{
+                "roadType": "Interstate",
+                "count": 187
+            },
+            {
+                "roadType": "Local",
+                "count": 48
+            },
+            {
+                "roadType": "Major Collector",
+                "count": 120
+            },
+            {
+                "roadType": "Minor Arterial",
+                "count": 279
+            },
+            {
+                "roadType": "Minor Collector",
+                "count": 129
+            },
+            {
+                "roadType": "Principal Arterial - Other",
+                "count": 358
+            },
+            {
+                "roadType": "Principal Arterial - Other Freeways and Expressways",
+                "count": 8
+            }
+        ],
+        "fatalityCorrelation": [{
+                "name": "PERSONS",
+                "value": 0.3248774
+            },
+            {
+                "name": "PERMVIT",
+                "value": 0.3248774
+            },
+            {
+                "name": "RUR_URB",
+                "value": 0.1873957
+            },
+            {
+                "name": "TYP_INT",
+                "value": 0.1584137
+            },
+            {
+                "name": "RELJCT1",
+                "value": 0.1584137
+            },
+            {
+                "name": "DAY",
+                "value": 0.144116
+            },
+            {
+                "name": "RELJCT2",
+                "value": 0.1391402
+            },
+            {
+                "name": "HOUR",
+                "value": 0.1377921
+            },
+            {
+                "name": "YEAR",
+                "value": 0.123521
+            }
+        ],
+        "anova": [{
+                "test": "Alcohol vs month",
+                "fStatistic": 2.0045308939151454,
+                "pValue": 0.004983531749998876
+            },
+            {
+                "test": "Alcohol vs day",
+                "fStatistic": 4.860550479218434,
+                "pValue": 9.517909393416155e-05
+            },
+            {
+                "test": "Alcohol vs hour",
+                "fStatistic": 1.5057620620326682,
+                "pValue": 9.279609674242546e-08
+            }
+        ],
+        "modelComparison": [{
+                "name": "Random Forest",
+                "mse": 0.11549476937127988,
+                "r2": -0.020747103577653858
+            },
+            {
+                "name": "Linear Regression",
+                "mse": 0.03774467813612312,
+                "r2": 0
+            }
+        ]
+    },
+    "bookMarket": {
+        "dataset": {
+            "rows": 52466,
+            "features": 25
+        },
+        "correlations": [{
+                "variable1": "numRatings",
+                "variable2": "bbeScore",
+                "pearson": 0.7092247703816008
+            },
+            {
+                "variable1": "bintang1",
+                "variable2": "pages",
+                "pearson": 0.026108113721744083
+            }
+        ],
+        "anova": {
+            "factor": "bookFormat",
+            "target": "price",
+            "fStatistic": 7.646672662738562,
+            "pValue": 1.8010826562805014e-30
+        },
+        "anovaModel": {
+            "factor": "bookFormat",
+            "target": "price",
+            "fStatistic": 4.381511,
+            "pValue": 3.37186e-38,
+            "degreesOfFreedom": 135
+        },
+        "formatMeanPrice": [{
+                "type": "Capa Mole",
+                "price": 162.485
+            },
+            {
+                "type": "Rústica",
+                "price": 119.0
+            },
+            {
+                "type": "Digital",
+                "price": 75.95
+            },
+            {
+                "type": "Slipcased Hardcover",
+                "price": 75.772
+            },
+            {
+                "type": "Bonded Leather",
+                "price": 51.03
+            },
+            {
+                "type": "Unbound",
+                "price": 51.025
+            },
+            {
+                "type": "Casebound",
+                "price": 47.01
+            },
+            {
+                "type": "Audio",
+                "price": 43.5775
+            },
+            {
+                "type": "Leather Bound",
+                "price": 42.164286
+            },
+            {
+                "type": "Tankobon Hardcover",
+                "price": 39.0
+            },
+            {
+                "type": "Graphic Novels",
+                "price": 33.035714
+            },
+            {
+                "type": "Boxed Set",
+                "price": 30.50875
+            },
+            {
+                "type": "ebook",
+                "price": 24.601262
+            },
+            {
+                "type": "Audiobook",
+                "price": 15.089667
+            },
+            {
+                "type": "Kindle Edition",
+                "price": 11.604628
+            },
+            {
+                "type": "Paperback",
+                "price": 9.358402
+            },
+            {
+                "type": "Hardcover",
+                "price": 10.302858
+            },
+            {
+                "type": "Mass Market",
+                "price": 10.47375
+            }
+        ],
+        "regression": {
+            "rSquared": 0.032,
+            "observations": 37889,
+            "fStatistic": 210.6,
+            "pValue": 2.32e-265
+        }
+    },
+    "sentimentAnalysis": {
+        "tfidf": {
+            "samples": 25000,
+            "features": 4001
+        },
+        "modelComparison": [{
+                "name": "Random Forest",
+                "accuracy": 0.695
+            },
+            {
+                "name": "SVC",
+                "accuracy": 0.72404
+            }
+        ],
+        "bertTraining": [{
+                "epoch": 1,
+                "loss": 0.6561,
+                "accuracy": 0.6129
+            },
+            {
+                "epoch": 2,
+                "loss": 0.5559,
+                "accuracy": 0.7158
+            },
+            {
+                "epoch": 3,
+                "loss": 0.4415,
+                "accuracy": 0.8004
+            }
+        ]
+    },
+    "socialNetwork": {
+        "retweet": {
+            "nodes": 1058,
+            "edges": 1312,
+            "density": 0.0011732030410281265,
+            "connectedComponents": 166,
+            "stronglyConnectedComponents": 1049,
+            "communities": {
+                "greedyModularity": 179
+            }
+        },
+        "mention": {
+            "nodes": 1270,
+            "edges": 1795,
+            "density": 0.0011137792173141479,
+            "connectedComponents": 185,
+            "stronglyConnectedComponents": 1260,
+            "communities": {
+                "greedyModularity": 196
+            }
+        }
+    }
 }
